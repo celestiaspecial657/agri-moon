@@ -1,0 +1,81 @@
+/* ── 1. External CSS imports MUST come before everything else ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+/* ── 2. Tailwind layers ──────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── 3. Global resets ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── 4. Leaflet overrides ───────────────────────────────────── */
+/* Ensure tiles are always positioned correctly */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background: #e8e0d8;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.leaflet-tile-pane {
+  opacity: 1;
+}
+
+.leaflet-tile {
+  /* Fix for some browsers where tiles appear offset */
+  image-rendering: auto;
+}
+
+/* Ensure Leaflet panes stack correctly */
+.leaflet-map-pane,
+.leaflet-tile-pane,
+.leaflet-overlay-pane,
+.leaflet-marker-pane,
+.leaflet-popup-pane {
+  position: absolute;
+}
+
+/* ── 5. Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+.dark ::-webkit-scrollbar-thumb { background: #374151; }
+
+/* ── 6. Component utilities ─────────────────────────────────── */
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-card;
+  }
+  .btn-primary {
+    @apply bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-xl text-sm font-medium transition-colors;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-green  { @apply badge bg-green-100  text-green-800  dark:bg-green-900/30  dark:text-green-400; }
+  .badge-yellow { @apply badge bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400; }
+  .badge-blue   { @apply badge bg-blue-100   text-blue-800   dark:bg-blue-900/30   dark:text-blue-400; }
+  .badge-gray   { @apply badge bg-gray-100   text-gray-700   dark:bg-gray-800      dark:text-gray-400; }
+  .badge-red    { @apply badge bg-red-100    text-red-700    dark:bg-red-900/30    dark:text-red-400; }
+}
